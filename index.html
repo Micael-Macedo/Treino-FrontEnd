@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div>
+                <ul><li><a href="index.html">Home</a></li></ul>
+            </div>
+            <div class="desktop-nav">
+                <ul>
+                    <li><a href="#sobre-mim-section">Sobre mim</a></li>
+                    <li><a href="#projetos-section">Projetos</a></li>
+                    <li><a href="#certificados-section">Certificados</a></li>
+                    <li><a href="#star-wars-section">Star wars</a></li>
+                    <li><a href="#contato-section">Contato</a></li>
+                </ul>
+            </div>
+            <button class="mobile-toggle" onselect="exibirMenu()" onclick="exibirMenu()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </button>
+        </nav>
+    </header>
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="#sobre-mim-section">Sobre mim</a></li>
+            <li><a href="#projetos-section">Projetos</a></li>
+            <li><a href="#certificados-section">Certificados</a></li>
+            <li><a href="#star-wars-section">Star wars</a></li>
+            <li><a href="#contato-section">Contato</a></li>
+        </ul>
+    </div>
+    <main>
+        <section aria-labelledby="sobre-mim" class="hidden" id="sobre-mim-section">
+            <h1 id="sobre-mim">Sobre mim</h1>
+            <p>Curso Técnico em Desenvolvimento de Sistemas, Buscando Fazer a diferença na área de Tecnologia</p>
+        </section>
+        <section aria-labelledby="projetos" class="hidden" id="projetos-section">
+            <h2 id="projetos">Projetos</h2>
+            <p>Curso Técnico em Desenvolvimento de Sistemas</p>
+        </section>
+        <section aria-labelledby="certificados" class="hidden" id="certificados-section">
+            <h2 id="certificados">Certificados</h2>
+            <p>Curso Técnico em Desenvolvimento de Sistemas</p>
+            <div class="certificados">
+                <div class="certificado">certificao1</div>
+                <div class="certificado">certificao2</div>
+                <div class="certificado">certificao3</div>
+                <div class="certificado">certificao4</div>
+                <div class="certificado">certificao5</div>
+                <div class="certificado">certificao6</div>
+            </div>
+        </section>
+        <section id="star-wars-section" class="hidden">
+            <h2>Star Wars</h2>
+            <div class="star-wars-content">
+
+            </div>
+        </section>
+        <section aria-labelledby="contato" class="hidden" id="contato-section">
+            <h2 id="contato">Contatos</h2>
+            <p>Curso Técnico em Desenvolvimento de Sistemas</p>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- https://coderwall.com/p/11z75g/iterating-over-nth-children-w-sass -->
