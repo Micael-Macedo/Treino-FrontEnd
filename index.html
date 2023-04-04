@@ -26,7 +26,6 @@
                 <ul>
                     <li><a href="#atores-section"><i class="fa-solid fa-user"></i>Atores</a></li>
                     <li><a href="#projetos-section"><i class="fa-solid fa-tarp"></i>Projetos</a></li>
-                    <li><a href="#certificados-section"><i class="fa-solid fa-certificate"></i>Certificados</a></li>
                     <li><a href="#star-wars-section"><i class="fa-solid fa-jedi"></i>Star wars</a></li>
                     <li><a href="#contato-section"><i class="fa-solid fa-phone"></i>Contato</a></li>
                 </ul>
@@ -42,7 +41,6 @@
         <ul>
             <li><a href="#atores-section"><i class="fa-solid fa-user"></i>Atores</a></li>
             <li><a href="#projetos-section"><i class="fa-solid fa-tarp"></i>Projetos</a></li>
-            <li><a href="#certificados-section"><i class="fa-solid fa-certificate"></i>Certificados</a></li>
             <li><a href="#star-wars-section"><i class="fa-solid fa-jedi"></i>Star wars</a></li>
             <li><a href="#contato-section"><i class="fa-solid fa-phone"></i>Contato</a></li>
         </ul>
@@ -162,18 +160,6 @@
                 </div>
             </div>
         </section>
-        <section aria-labelledby="certificados" class="hidden" id="certificados-section">
-            <h2 id="certificados">Certificados</h2>
-            <p>Curso Técnico em Desenvolvimento de Sistemas</p>
-            <div class="certificados">
-                <div class="certificado">certificao1</div>
-                <div class="certificado">certificao2</div>
-                <div class="certificado">certificao3</div>
-                <div class="certificado">certificao4</div>
-                <div class="certificado">certificao5</div>
-                <div class="certificado">certificao6</div>
-            </div>
-        </section>
         <section id="star-wars-section" class="hidden">
             <h2>Star Wars</h2>
             <div class="star-wars-content cards">
@@ -182,7 +168,36 @@
         </section>
         <section aria-labelledby="contato" class="hidden" id="contato-section">
             <h2 id="contato">Contatos</h2>
-
+            <form action="" method="post">
+                <div>
+                    <div class="inline-form">
+                        <div>
+                            <label for="">Nome</label>
+                            <input type="text" placeholder="Nome">
+                        </div>
+                        <div>
+                            <label for="">Telefone</label>
+                            <input type="text" placeholder="(71) 99999-9999">
+                        </div>
+                    </div>
+                    <div class="inline-form">
+                        <div>
+                            <label for="">Topico</label>
+                            <input type="text" placeholder="Topico">
+                        </div>
+                        <div>
+                            <label for="">Email</label>
+                            <input type="text" placeholder="seuemail@email.com">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="">Escreva sua mensagem</label>
+                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
+                
+                <button type="submit">Enviar</button>
+            </form>
         </section>
     </main>
     <script src="script.js"></script>

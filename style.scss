@@ -65,6 +65,7 @@
 }
 h2{
     font-size: 3rem;
+    text-align: center;
 }
 body{
     background-color: black;
@@ -141,14 +142,14 @@ header{
             &.open{
                 .bar1{
                     transform: rotate(45deg);
-                    translate: 2px 15px;
+                    translate: 2px 13px;
                 }
                 .bar2{
                     opacity: 0;
                 }
                 .bar3{
                     transform: rotate(-45deg);
-                    translate: 2px -15px;
+                    translate: 2px -14px;
                 }
             }
         }
@@ -323,6 +324,72 @@ main{
     }
 }
 
+form{
+    margin: 0 auto;
+    width: 90%;
+    background-color: #073b4c;
+    border-radius: 20px;
+    height: 80vh;
+    padding: 3% 5%;
+    @include DisplayContent(center, space-between);
+    flex-direction: column;
+    label{
+        color: #ed78a5;
+    }
+    input{
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        min-height: 30px;
+        padding-left: 10px;
+        border-bottom: 2px solid #ed78a5;
+        margin-bottom: 10px;
+        color: white;
+        &::placeholder{
+            color: white;
+
+        }
+        &:focus{
+            outline: none;
+            border-bottom: 2px solid #d72c6e;
+        }
+    }
+    textarea{
+        margin-top: 10px;
+        width: 100%;
+        background-color: transparent;
+        border: 2px solid #ed78a5;
+        padding: 10px;
+        color: white;
+        &::placeholder{
+            color: white;
+
+        }
+        &:focus{
+            outline: none;
+            border: 2px solid #d72c6e;
+        }
+    }
+    label{
+        text-align: start
+    }
+    div{
+        width: 100%;
+    }
+    .inline-form{
+        div{
+            @include DisplayContent(start, center);
+            flex-direction: column;
+        }
+    }
+    button{
+        width: 200px;
+        padding: 10px; 
+        border-radius: 15px;
+        background-color: #d72c6e;
+        border: none;
+    }
+}
 @media (min-width:925px) {
     div.desktop-nav{
         display: flex !important;
@@ -332,6 +399,12 @@ main{
     }
     .mobile-menu{
         display: none !important;
+    }
+}
+@media (min-width:768px) {
+    .inline-form{
+        @include DisplayContent(center, space-between);
+        gap: 30px;
     }
 }
 

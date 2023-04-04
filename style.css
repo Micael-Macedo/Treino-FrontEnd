@@ -60,6 +60,7 @@
 
 h2 {
   font-size: 3rem;
+  text-align: center;
 }
 
 body {
@@ -140,14 +141,14 @@ header nav button.mobile-toggle .bar1, header nav button.mobile-toggle .bar2, he
 }
 header nav button.mobile-toggle.open .bar1 {
   transform: rotate(45deg);
-  translate: 2px 15px;
+  translate: 2px 13px;
 }
 header nav button.mobile-toggle.open .bar2 {
   opacity: 0;
 }
 header nav button.mobile-toggle.open .bar3 {
   transform: rotate(-45deg);
-  translate: 2px -15px;
+  translate: 2px -14px;
 }
 
 div.mobile-menu {
@@ -321,6 +322,79 @@ main section:nth-last-child(1) {
   animation: pulse 2s infinite;
 }
 
+form {
+  margin: 0 auto;
+  width: 90%;
+  background-color: #073b4c;
+  border-radius: 20px;
+  height: 80vh;
+  padding: 3% 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+form label {
+  color: #ed78a5;
+}
+form input {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  min-height: 30px;
+  padding-left: 10px;
+  border-bottom: 2px solid #ed78a5;
+  margin-bottom: 10px;
+  color: white;
+}
+form input::-moz-placeholder {
+  color: white;
+}
+form input::placeholder {
+  color: white;
+}
+form input:focus {
+  outline: none;
+  border-bottom: 2px solid #d72c6e;
+}
+form textarea {
+  margin-top: 10px;
+  width: 100%;
+  background-color: transparent;
+  border: 2px solid #ed78a5;
+  padding: 10px;
+  color: white;
+}
+form textarea::-moz-placeholder {
+  color: white;
+}
+form textarea::placeholder {
+  color: white;
+}
+form textarea:focus {
+  outline: none;
+  border: 2px solid #d72c6e;
+}
+form label {
+  text-align: start;
+}
+form div {
+  width: 100%;
+}
+form .inline-form div {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+}
+form button {
+  width: 200px;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #d72c6e;
+  border: none;
+}
+
 @media (min-width: 925px) {
   div.desktop-nav {
     display: flex !important;
@@ -330,5 +404,13 @@ main section:nth-last-child(1) {
   }
   .mobile-menu {
     display: none !important;
+  }
+}
+@media (min-width: 768px) {
+  .inline-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
   }
 }/*# sourceMappingURL=style.css.map */
