@@ -344,6 +344,7 @@ form input {
   min-height: 30px;
   padding-left: 10px;
   border-bottom: 2px solid #ed78a5;
+  transition: 0.4s;
   margin-bottom: 10px;
   color: white;
 }
@@ -362,6 +363,7 @@ form textarea {
   width: 100%;
   background-color: transparent;
   border: 2px solid #ed78a5;
+  transition: 0.4s;
   padding: 10px;
   color: white;
 }
