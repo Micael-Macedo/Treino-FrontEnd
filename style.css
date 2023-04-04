@@ -329,6 +329,8 @@ main section:nth-last-child(1) {
   border-radius: 50%;
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #atores-section .people .actor:hover {
   animation: pulse 2s infinite;
