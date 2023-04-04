@@ -215,7 +215,15 @@ main{
     }
     
 }
-
+.advice{
+    height: 70vh;
+    @include DisplayContent(center, center);
+    p{
+        font-size: 2rem;
+        width: 90%;
+        text-align: center;
+    }
+}
 .cards{
     width: 100%;
     padding: 5%;

@@ -212,6 +212,18 @@ main section:nth-last-child(1) {
   margin-bottom: 0% !important;
 }
 
+.advice {
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.advice p {
+  font-size: 2rem;
+  width: 90%;
+  text-align: center;
+}
+
 .cards {
   width: 100%;
   padding: 5%;

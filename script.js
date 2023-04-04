@@ -18,7 +18,8 @@ $('.mobile-menu a').on('click', function () {
     exibirMenu()
 });
 $(document).ready(function () {
-    StarWars()
+    StarWars();
+    conselho(); 
 });
 async function  StarWars() {
     let result = await fetch("https://swapi.dev/api/people/").then(
@@ -48,4 +49,14 @@ async function  StarWars() {
             );
         });
     }
+}
+async function conselho() {
+    let result = await fetch("	https://api.adviceslip.com/advice").then(r => {
+        return r.json();
+    });
+    console.log(result.slip.advice);
+    $('.advice').append(
+        `<p>"${result.slip.advice}"</p>`
+    );
+    
 }
