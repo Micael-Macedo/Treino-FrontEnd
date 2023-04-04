@@ -31,16 +31,19 @@ async function  StarWars() {
         result.results.forEach(pessoa => {
             $('.star-wars-content').append(
                     `
-                    <div class="Personagem">
-                        <div>
-                            <h2>Nome<h2/>
+                    <div class="Personagem card">
+                        <div class="card-header">
+                            <h2>Nome:<h2/>
                             <p>${pessoa.name}</p>
                         </div>
-                        <div>
-                            <h2>Altura<h2/>
-                            <p>${pessoa.height}</p>
+                        <div class="card-body">
+                            <div>
+                                <h2>Altura<h2/>
+                                <p>${pessoa.height}</p>
+                            </div>
+                            <img src="" alt="logStarWars" />
                         </div>
-                        <div>
+                        <div class="card-footer">
                             <h2>Peso<h2/>
                             <p>${pessoa.mass}</p>
                         </div>

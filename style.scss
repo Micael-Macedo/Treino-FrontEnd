@@ -23,13 +23,28 @@
         filter: blur(0);
     }
 }
-
+@keyframes linearTopToBottom {
+    from{
+        background-position: left;
+    }to{
+        background-position: right;
+    }
+}
+@mixin DisplayContent($align, $just){
+    display: flex;
+    align-items: $align;
+    justify-content: $just;
+}
 *{
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h2{
+    font-size: 3rem;
 }
 body{
     background-color: black;
@@ -59,9 +74,7 @@ header{
     top: 0;
     z-index: 10;
     ul{
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include DisplayContent(center, center);
         gap: 20px;
         a{
             color: white;
@@ -75,11 +88,11 @@ header{
     }
     nav{
         height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        @include DisplayContent(center, space-between);
         padding: 0% 2%;
-       
+        i{
+            margin-right: 10px;
+        }
         div.desktop-nav{
             display: none;
         }
@@ -125,7 +138,7 @@ div.mobile-menu{
     ul{
         transform: translateY(-150%);
         filter: blur(15px);
-        transition: 2s;
+        transition: 1s;
     }
     &.open{
         display: flex;
@@ -138,23 +151,24 @@ div.mobile-menu{
             padding: 5%;
             justify-content: start;
             flex-direction: column !important;
-            animation: loadFromTop 2s ease-in;
+            animation: loadFromTop 1.4s ease-in;
             transform: translateY(0%);
             filter: blur(0px);
             li{
                 height: 50px;
                 border-bottom: black 2px solid;
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                @include DisplayContent(center, center);
                 a{
-                    color: white;
                     cursor: pointer;
+                    color: white;
                     font-size: 2rem;
                     transition: 0.6s;
                     text-align: center;
                     &:hover{
                         color: black;
+                    }
+                    i{
+                        margin-right: 10px;
                     }
                 }
             }
@@ -174,10 +188,77 @@ main{
     }
     
 }
-.Personagem {
-    display: flex;
-  }
-@media (min-width:580px) {
+
+.cards{
+    width: 100%;
+    padding: 5%;
+    @include DisplayContent(center, center);
+    flex-wrap: wrap;
+    gap: 25px 25px;
+    .card{
+        border-radius: 15px;
+        background-color: white;
+        color: black;
+        width: 300px;
+        max-width: 80%;
+        height: 400px;
+        cursor: pointer;
+        transition: 0.8s;
+        &:hover{
+            transform: scale(1.2) rotate(5deg) ;
+        }
+        .card-header{
+            padding: 10px;
+            h2{
+                background-image: linear-gradient(90deg, #9b5de5, #f15bb5, #fee440, #00bbf9, #00f5d4, #073b4c,  #9b5de5, #f15bb5, #fee440);
+                background-size: 200%;
+                background-clip: text;
+                font-weight: 800;
+                background-position: bottom;
+                color: transparent;
+                animation: linearTopToBottom 5s infinite alternate;
+            }
+        }
+        .card-body{
+            border-top: 2px solid black;
+            border-bottom: 2px solid black;
+            object-fit: cover;
+            object-position: bottom;
+            img{
+                width: 100%;
+                height: 100%;
+
+            }
+        }
+        .card-footer{
+            padding: 10px;
+            h2{
+                font-size: 1.7rem;
+                background-image: linear-gradient(90deg, #9b5de5, #f15bb5, #fee440, #00bbf9, #00f5d4, #073b4c,  #9b5de5, #f15bb5, #fee440);
+                background-size: 200%;
+                background-clip: text;
+                font-weight: 800;
+                background-position: bottom;
+                color: transparent;
+                animation: linearTopToBottom 5s infinite alternate-reverse;
+            }
+            .tech{
+                i{
+                    font-size: 26px;
+                }
+            }
+        }
+        &.Personagem{
+            .card-header{
+                h2{
+                    font-size: 1.6rem !important;
+                }
+            }
+            
+        }
+    }
+}
+@media (min-width:925px) {
     div.desktop-nav{
         display: flex !important;
     }
