@@ -204,7 +204,8 @@ main section:nth-last-child(1) {
   color: black;
   width: 300px;
   max-width: 80%;
-  height: 400px;
+  min-height: -moz-max-content;
+  min-height: max-content;
   cursor: pointer;
   transition: 0.8s;
 }
@@ -253,8 +254,18 @@ main section:nth-last-child(1) {
 .cards .card .card-footer .tech i {
   font-size: 26px;
 }
+.cards .card.Personagem {
+  transition: 2s;
+}
+.cards .card.Personagem:hover {
+  transform: scale(0.8) rotate(360deg);
+}
 .cards .card.Personagem .card-header h2 {
   font-size: 1.6rem !important;
+}
+.cards .card.Personagem .card-footer {
+  display: flex;
+  gap: 5px;
 }
 
 @media (min-width: 925px) {

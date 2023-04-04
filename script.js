@@ -37,11 +37,7 @@ async function  StarWars() {
                             <p>${pessoa.name}</p>
                         </div>
                         <div class="card-body">
-                            <div>
-                                <h2>Altura<h2/>
-                                <p>${pessoa.height}</p>
-                            </div>
-                            <img src="" alt="logStarWars" />
+                            <img src="images/the-mandalorian.webp" alt="logStarWars" />
                         </div>
                         <div class="card-footer">
                             <h2>Peso<h2/>

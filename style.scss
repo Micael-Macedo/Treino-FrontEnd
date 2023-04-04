@@ -201,7 +201,7 @@ main{
         color: black;
         width: 300px;
         max-width: 80%;
-        height: 400px;
+        min-height: max-content;
         cursor: pointer;
         transition: 0.8s;
         &:hover{
@@ -249,10 +249,18 @@ main{
             }
         }
         &.Personagem{
+            transition: 2s;
+            &:hover{
+                transform: scale(0.8) rotate(360deg) ;
+            }
             .card-header{
                 h2{
                     font-size: 1.6rem !important;
                 }
+            }
+            .card-footer{
+                display: flex;
+                gap: 5px;
             }
             
         }
